@@ -1,0 +1,9 @@
+MSG=input('Enter the data to be encoded')
+CONSTRAINTLENGTH=3
+CODEGENERATOR=[5,7]
+TRELLIS = poly2trellis(CONSTRAINTLENGTH, CODEGENERATOR)
+CODE = convenc(MSG,TRELLIS)
+TBLEN=log2(TRELLIS.numOutputSymbols)
+OPMODE='trunc'
+DECTYPE= 'hard'
+DECODED = vitdec(CODE,TRELLIS,TBLEN,OPMODE,DECTYPE)
