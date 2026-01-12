@@ -1,7 +1,7 @@
 parity_matrix=[0.1,0.2,0.3,0.4]
 generator_matrix=[eye(4),parity_matrix]
 data_matrix=input('Enter 4 bit data in a single row')
-code_matrix=mod(data_matrix*generator_marix,2)
+code_matrix=mod(data_matrix*generator_matrix,2)
 parity_check_matrix=[parity_matrix'eye(3)]
 H_transpose=parity_check_matrix'
 received_bits=input('Enter the received bits in a row')
